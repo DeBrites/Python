@@ -4,6 +4,6 @@
 # 3 - Em que posição ela aparece a última vez.
 
 frase = input('Digite uma frase: ').strip().upper()
-print(f'A letra "A" aparece {frase.count("A")} vezes na frase.')
-print(f'A letra "A" aparece pela primeira vez na posição {frase.find("A") + 1}.')
-print(f'A letra "A" aparece pela última vez na posição {frase.rfind("A") + 1}.')
+print(f'A letra "A" aparece \033[31m{frase.count("A")}\033[m vezes na frase.')
+print(f'A letra "A" aparece pela primeira vez na posição \033[31m{frase.find("A") + 1}\033[m.')
+print(f'A letra "A" aparece pela última vez na posição \033[31m{frase.rfind("A") + 1}\033[m.')

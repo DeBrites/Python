@@ -4,4 +4,4 @@ if s > 1250:
     ns = s + (s*0.10)
 else:
     ns = s + (s*0.15)
-print(f'Seu novo salário é de R${ns:.2f}')
+print(f'Seu novo salário é de \033[41mR${ns:.2f}\033[m')

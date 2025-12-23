@@ -6,5 +6,5 @@ a3 = input('Nome do terceiro aluno: ')
 a4 = input('Nome do quarto aluno: ')
 lista = [a1, a2, a3, a4]
 shuffle(lista)
-print('A ordem de apresentação será:')
+print('\033[32mA ordem de apresentação será:\033[m')
 print(lista)

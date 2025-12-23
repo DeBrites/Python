@@ -69,3 +69,5 @@ print('\033[1;36mDica: Use cores para destacar informações importantes.\033[m'
 print('\033[45mFundo roxo para destacar esta mensagem.\033[m')  
 print('\033[4;32mTexto verde sublinhado para ênfase.\033[m')
 print('\033[7;31mTexto vermelho com efeito invertido para chamar atenção.\033[m')
+
+Para colorir uma variável 

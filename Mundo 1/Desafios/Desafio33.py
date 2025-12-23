@@ -12,4 +12,4 @@ if n2 < menor:
     menor = n2
 if n3 < menor:
     menor = n3
-print(f'O maior número é {maior} e o menor número é {menor}.')
+print(f'O maior número é \033[45m{maior}\033[m e o menor número é \033[45m{menor}\033[m.')

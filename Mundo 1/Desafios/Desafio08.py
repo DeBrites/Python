@@ -6,10 +6,10 @@ dam = m / 10
 dm = m * 10
 cm = m * 100
 mm = m * 1000
-print(f'A medida de {m} metros corresponde a:')
+print(f'\033[32mA medida de {m} metros corresponde a:')
 print(f'{km} km')
 print(f'{hm} hm')
 print(f'{dam} dam')
 print(f'{dm} dm')
 print(f'{cm} cm')
-print(f'{mm} mm')
+print(f'{mm} mm\033[m')

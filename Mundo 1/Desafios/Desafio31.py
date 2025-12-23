@@ -4,4 +4,4 @@ if d <= 200:
     p = d * 0.5
 else:
     p = d * 0.45
-print(f'O preço da passagem é de R${p:.2f}.')
+print(f'O preço da passagem é de \033[33mR${p:.2f}\033[m.')
