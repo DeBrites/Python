@@ -1,50 +1,105 @@
-Os dados, se eles forem mensagens, eles terão delimitadores especiais. 
+"""
+==================================================
+AULA 01 — PRIMEIROS COMANDOS EM PYTHON
+Mundo 1 — Fundamentos da Linguagem
+==================================================
 
-O delimitador especial no Python é a aspa simples (') ou a aspa dupla ("). A grande parte da comunidade utiliza a aspa simples para delimitar mensagens.
-                                                   
-Todos os comandos são funções e todas as funções possuem parênteses.    
+Nesta aula você vai aprender:
+- O que são strings (textos)
+- Diferença entre texto e números
+- Uso do print()
+- Operações simples
+- Variáveis
+- Entrada de dados com input()
+- Comentários no código
+"""
 
-Exemplo:
-print('Olá, Mundo!') aparecerá a mensagem Olá, Mundo! na tela.
+# ------------------------------------------------
+# 1. STRINGS (TEXTOS)
+# ------------------------------------------------
+# Strings são textos.
+# Em Python, textos devem ser delimitados por:
+# - Aspas simples: 'texto'
+# - Aspas duplas: "texto"
+#
+# A comunidade Python costuma usar aspas simples.
 
-No Python, números não precisam de aspas. Eles são reconhecidos como números automaticamente.
+print('Olá, Mundo!')
+print("Python é incrível!")
 
-Exemplo:
-print(7+4) ou 7+4 resultará na soma dos números, ou seja, 11.
+# ------------------------------------------------
+# 2. PRINT() — FUNÇÃO DE SAÍDA
+# ------------------------------------------------
+# print() é uma função.
+# Funções em Python SEMPRE usam parênteses.
 
-Porém para expressar números como mensagens, é necessário o uso de aspas.
+print('Essa mensagem aparece no terminal')
 
-Exemplo:
-print('7+4') resultará na mensagem '7+4' e não na soma dos números.
+# ------------------------------------------------
+# 3. NÚMEROS VS TEXTOS
+# ------------------------------------------------
+# Números NÃO usam aspas.
+# Eles são reconhecidos automaticamente como valores numéricos.
 
-E se isolar as aspas em cada número?
+print(7 + 4)  # Soma matemática → 11
 
-Exemplo:
-print('7'+'4') ou '7'+'4' resultará na junção das mensagens, ou seja, '74'.
+# Quando colocamos números entre aspas,
+# eles passam a ser apenas TEXTO.
 
-Para combinar tudo isso e guardar as informações em um lugar, utilizamos as variáveis.
+print('7+4')  # Não soma, apenas mostra o texto
 
-No caso do Python, toda variável é um objeto. Um objeto é uma estrutura que guarda informações e possui características e comportamentos.
+# ------------------------------------------------
+# 4. CONCATENAÇÃO DE STRINGS
+# ------------------------------------------------
+# Quando usamos + entre strings, ocorre concatenação (junção).
 
-Toda variável pode receber valores, o "recebe" é representado pelo sinal de igual (=).
+print('7' + '4')  # Resultado: 74
 
-Exemplo:
-nome='Guanabara' guarda a mensagem 'Guanabara' na variável nome.
-idade=18 guarda o número 18 na variável idade.  
-peso=80.5 guarda o número 80.5 na variável peso.
+# ------------------------------------------------
+# 5. VARIÁVEIS
+# ------------------------------------------------
+# Variáveis servem para armazenar dados.
+# Em Python, toda variável é um objeto.
+#
+# O sinal "=" significa ATRIBUIÇÃO (recebe).
 
-Para exibir o conteúdo de uma variável, basta utilizar o comando print() com o nome da variável dentro dos parênteses.
+nome = 'Guanabara'
+idade = 18
+peso = 80.5
 
-Exemplo:
-print(nome, idade, peso) resultará na mensagem Guanabara 18 80.5
+# Para mostrar o conteúdo das variáveis, usamos print()
 
-Para que essas variáveis não sejam fixas, podemos utilizar a função input() para receber dados do usuário.
+print(nome, idade, peso)
 
-Exemplo:
-nome=input('Qual é o seu nome? ') exibirá a mensagem "Qual é o seu nome?" na tela e aguardará o usuário digitar uma resposta. A resposta digitada será armazenada na variável nome.
+# ------------------------------------------------
+# 6. ENTRADA DE DADOS COM INPUT()
+# ------------------------------------------------
+# input() permite receber dados digitados pelo usuário.
+# Tudo que o usuário digita é recebido como TEXTO (string).
 
-idade=input('Quantos anos você tem? ') exibirá a mensagem "Quantos anos você tem?" na tela e aguardará o usuário digitar uma resposta. A resposta digitada será armazenada na variável idade.
+nome = input('Qual é o seu nome? ')
+idade = input('Quantos anos você tem? ')
+peso = input('Qual é o seu peso? ')
 
-peso=input('Qual é o seu peso? ') exibirá a mensagem "Qual é o seu peso?" na tela e aguardará o usuário digitar uma resposta. A resposta digitada será armazenada na variável peso.
+print('Dados informados:')
+print(nome, idade, peso)
 
-E para comentários, utilizamos o símbolo jogo da velha (#). Tudo que estiver após esse símbolo em uma linha será ignorado pelo interpretador Python.
+# ------------------------------------------------
+# 7. COMENTÁRIOS NO CÓDIGO
+# ------------------------------------------------
+# Comentários começam com o símbolo #
+# Tudo que estiver após o # é ignorado pelo Python.
+#
+# Comentários servem para:
+# - Explicar o código
+# - Organizar o raciocínio
+# - Ajudar quem está aprendendo (inclusive você no futuro!)
+
+# Exemplo de comentário:
+# print('Esta linha não será executada')
+
+"""
+==================================================
+FIM DA AULA 01
+==================================================
+"""
