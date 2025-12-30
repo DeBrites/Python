@@ -1,49 +1,100 @@
-Cada variável que "recebe" um valor, esse valor possui um tipo de dado. 
-Os tipos de dados mais comuns no Python são:
-- int (inteiro)
-- float (número decimal)
-- bool (booleano - True ou False)
-- str (string - sequência de caracteres)
+"""
+==================================================
+AULA 02 — TIPOS DE DADOS EM PYTHON
+Mundo 1 — Fundamentos da Linguagem
+==================================================
 
-Exemplos:
-n1 = 5          # int
-n2 = 3.14       # float
-ligado = True   # bool
-nome = 'Maria'  # str
+Nesta aula você vai aprender:
+- O que são tipos de dados
+- Tipos primitivos mais comuns do Python
+- Como descobrir o tipo de uma variável
+- Conversão de tipos (casting)
+- Entrada de dados convertida
+- Formatação de strings
+"""
 
-Podemos verificar o tipo de dado de uma variável utilizando a função type().
+# ------------------------------------------------
+# 1. O QUE SÃO TIPOS DE DADOS?
+# ------------------------------------------------
+# Toda variável em Python armazena um valor.
+# Esse valor possui um TIPO DE DADO.
+#
+# O tipo define:
+# - Que tipo de informação é
+# - Quais operações podem ser feitas
 
-Exemplos:
-print(type(n1))      # Saída: <class 'int'>
-print(type(n2))      # Saída: <class 'float'>
-print(type(ligado))  # Saída: <class 'bool'>
-print(type(nome))    # Saída: <class 'str'>
+# ------------------------------------------------
+# 2. TIPOS DE DADOS MAIS COMUNS
+# ------------------------------------------------
+# int   → números inteiros (ex: 10, -3, 0)
+# float → números decimais (ex: 3.14, 1.75)
+# bool  → valores lógicos (True ou False)
+# str   → textos (strings)
 
-Além disso, podemos converter entre tipos de dados utilizando funções como int(), float(), str(), etc
+n1 = 5            # int
+n2 = 3.14         # float
+ligado = True     # bool
+nome = 'Maria'    # str
 
-Exemplos:
+print(n1, n2, ligado, nome)
+
+# ------------------------------------------------
+# 3. DESCOBRINDO O TIPO DE UMA VARIÁVEL
+# ------------------------------------------------
+# A função type() mostra o tipo de dado da variável.
+
+print(type(n1))       # <class 'int'>
+print(type(n2))       # <class 'float'>
+print(type(ligado))   # <class 'bool'>
+print(type(nome))     # <class 'str'>
+
+# ------------------------------------------------
+# 4. CONVERSÃO DE TIPOS (CASTING)
+# ------------------------------------------------
+# Às vezes precisamos converter um tipo em outro.
+# Isso é feito com funções como:
+# int(), float(), str()
+
 idade_str = '25'
-idade_int = int(idade_str)  # Converte string para inteiro
-altura_float = float('1.75') # Converte string para float
+idade_int = int(idade_str)  # string → inteiro
+
+altura_float = float('1.75')  # string → float
+
 peso_str = '70.5'
-peso_float = float(peso_str)  # Converte string para float
-print(idade_int, type(idade_int))      # Saída: 25 <class 'int'>
-print(altura_float, type(altura_float))# Saída: 1.75 <class 'float'>
-print(peso_float, type(peso_float))    # Saída: 70.5 <class 'float'>
+peso_float = float(peso_str)
 
-Essas conversões são úteis quando recebemos dados do usuário, pois a função input() sempre retorna uma string.
+print(idade_int, type(idade_int))
+print(altura_float, type(altura_float))
+print(peso_float, type(peso_float))
 
-Exemplo:
-idade = int(input('Digite sua idade: '))  # Converte a entrada para inteiro
-altura = float(input('Digite sua altura: '))  # Converte a entrada para float
-print('Idade:', idade, 'Altura:', altura)
+# ------------------------------------------------
+# 5. INPUT() SEMPRE RETORNA STRING
+# ------------------------------------------------
+# Tudo que vem do input() chega como texto (str).
+# Por isso, precisamos converter quando queremos números.
 
-Além disso, podemos formatar strings utilizando f-strings para incluir variáveis dentro de mensagens.
-Exemplo:
+idade = int(input('Digite sua idade: '))
+altura = float(input('Digite sua altura: '))
+
+print('Idade:', idade)
+print('Altura:', altura)
+
+# ------------------------------------------------
+# 6. FORMATAÇÃO DE STRINGS
+# ------------------------------------------------
+# Existem várias formas de montar textos com variáveis.
+
 nome = 'Ana'
 idade = 30
-print(f'Nome: {nome}, Idade: {idade}')  # Saída: Nome: Ana, Idade: 30
 
-Ou com o método format() que é uma sintaxe mais antiga:
-print('Nome: {}, Idade: {}'.format(nome, idade))  # Saída: Nome: Ana, Idade: 30
+# Forma moderna e recomendada → f-strings
+print(f'Nome: {nome}, Idade: {idade}')
 
+# Forma mais antiga → format()
+print('Nome: {}, Idade: {}'.format(nome, idade))
+
+"""
+==================================================
+FIM DA AULA 02
+==================================================
+"""
