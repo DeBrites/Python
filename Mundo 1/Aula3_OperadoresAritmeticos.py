@@ -1,109 +1,154 @@
-Os operadores aritméticos em Python são utilizados para realizar operações matemáticas básicas. Aqui estão os principais operadores aritméticos:
+# ============================================
+# AULA 3 — OPERADORES ARITMÉTICOS EM PYTHON
+# Mundo 1 — Fundamentos
+# ============================================
 
-- Adição (+)
-- Subtração (-)
-- Multiplicação (*)
-- Exponenciação (**)
-- Divisão (/)
-- Divisão inteira (//)
-- Módulo (%)
+# Operadores aritméticos são utilizados para realizar
+# operações matemáticas básicas no Python.
 
-Exemplos de uso:
+# PRINCIPAIS OPERADORES:
+# +  Adição
+# -  Subtração
+# *  Multiplicação
+# ** Exponenciação
+# /  Divisão
+# // Divisão inteira
+# %  Módulo (resto da divisão)
+
+# --------------------------------------------
+# EXEMPLOS BÁSICOS
+# --------------------------------------------
+
 a = 10
 b = 3
-soma = a + b          # Adição: resultado é 13
-subtracao = a - b     # Subtração: resultado é 7
-multiplicacao = a * b  # Multiplicação: resultado é 30
-exponenciacao = a ** b # Exponenciação: resultado é 1000 (10 elevado a 3)
-divisao = a / b       # Divisão: resultado é 3.3333...
-divisao_inteira = a // b # Divisão inteira: resultado é 3
-modulo = a % b        # Módulo: resultado é 1 (resto da divisão de 10 por 3)
 
-O operando pode ser um número inteiro (int) ou um número decimal (float) e até uma string (str) em alguns casos, como na adição (concatenação).
+soma = a + b
+subtracao = a - b
+multiplicacao = a * b
+exponenciacao = a ** b
+divisao = a / b
+divisao_inteira = a // b
+modulo = a % b
 
-Exemplos com diferentes tipos de dados:
-x = 5          # int
-y = 2.5        # float
-z = 'Hello'    # str
-soma_int_float = x + y        # Resultado é 7.5 (int + float)
-concat_str = z + ' World'     # Resultado é 'Hello World' (str + str)
-print('Soma int e float:', soma_int_float)
+print('Adição:', soma)                 # 13
+print('Subtração:', subtracao)         # 7
+print('Multiplicação:', multiplicacao) # 30
+print('Exponenciação:', exponenciacao) # 1000
+print('Divisão:', divisao)             # 3.333...
+print('Divisão inteira:', divisao_inteira) # 3
+print('Módulo:', modulo)               # 1
+
+# --------------------------------------------
+# OPERADORES COM DIFERENTES TIPOS DE DADOS
+# --------------------------------------------
+
+# Operações podem envolver números inteiros (int),
+# números decimais (float) e strings (str)
+
+x = 5        # int
+y = 2.5      # float
+z = 'Hello'  # str
+
+soma_int_float = x + y
+concat_str = z + ' World'
+
+print('Soma int + float:', soma_int_float)
 print('Concatenação de strings:', concat_str)
-type_soma = type(soma_int_float)
-type_concat = type(concat_str)
-print('Tipo da soma (int + float):', type_soma) # Saída: <class 'float'>
-print('Tipo da concatenação (str + str):', type_concat) # Saída: <class 'str'>
 
-A ordem de precedência dos operadores aritméticos em Python é a seguinte:
+print('Tipo da soma:', type(soma_int_float))     # float
+print('Tipo da concatenação:', type(concat_str)) # str
 
-1. Parênteses ()
-2. Exponenciação (**) ou pow(a, b) # Eleva 'a' à potência de 'b'
-3. Multiplicação (*), Divisão (/), Divisão inteira (//), Módulo (%)
-4. Adição (+), Subtração (-)
+# --------------------------------------------
+# ORDEM DE PRECEDÊNCIA DOS OPERADORES
+# --------------------------------------------
 
-Exemplo de precedência:
+# A ordem de execução segue esta hierarquia:
+# 1. Parênteses ()
+# 2. Exponenciação (**)
+# 3. Multiplicação (*), Divisão (/), Divisão inteira (//), Módulo (%)
+# 4. Adição (+), Subtração (-)
+
 resultado = 3 + 5 * 2 ** 2 - (4 / 2)
-# Passo a passo:
-# 1. Exponenciação: 2 ** 2 = 4
-# 2. Multiplicação: 5 * 4 = 20
-# 3. Divisão: 4 / 2 = 2.0
-# 4. Adição e Subtração: 3 + 20 - 2.0 = 21.0
-print('Resultado da expressão:', resultado) # Saída: 21.0
 
-Outro exemplo:
+# Passo a passo:
+# 2 ** 2 = 4
+# 5 * 4 = 20
+# 4 / 2 = 2.0
+# 3 + 20 - 2.0 = 21.0
+
+print('Resultado da expressão:', resultado)
+
+# Outro exemplo:
+
 calculo = (10 + 2 * 3 ** 2) / 4 - 10 % 3
+
 # Passo a passo:
-# 1. Exponenciação: 3 ** 2 = 9
-# 2. Multiplicação: 2 * 9 = 18
-# 3. Adição: 10 + 18 = 28
-# 4. Módulo: 10 % 3 = 1
-# 5. Divisão: 28 / 4 = 7.0
-# 6. Subtração: 7.0 - 1 = 6.0
-print('Resultado do cálculo:', calculo) # Saída: 6.0
+# 3 ** 2 = 9
+# 2 * 9 = 18
+# 10 + 18 = 28
+# 10 % 3 = 1
+# 28 / 4 = 7.0
+# 7.0 - 1 = 6.0
 
-O igual "==" é um operador de comparação utilizado para verificar se dois valores são iguais. Ele retorna um valor booleano: True se os valores forem iguais e False se não forem. Enquanto isso, o sinal de igual simples "=" é um operador de atribuição usado para atribuir um valor a uma variável.
+print('Resultado do cálculo:', calculo)
 
-Exemplos de uso do operador de comparação "==":
+# --------------------------------------------
+# DIFERENÇA ENTRE "=" E "=="
+# --------------------------------------------
+
+# "=" é operador de ATRIBUIÇÃO
+# "==" é operador de COMPARAÇÃO
+
 a = 5
 b = 5
 c = 10
-print(a == b)  # Saída: True, porque 5 é igual a 5
-print(a == c)  # Saída: False, porque 5 não é igual a
-print(b == c)  # Saída: False, porque 5 não é igual a 10
 
-No caso de operador aritmético com strings, o operador de adição "+" é usado para concatenar (juntar) duas ou mais strings.
+print(a == b)  # True
+print(a == c)  # False
+print(b == c)  # False
 
-xemplos de concatenação de strings:
-str1 = "Olá, "
-str2 = "mundo!"
+# --------------------------------------------
+# OPERAÇÕES COM STRINGS
+# --------------------------------------------
+
+# Concatenação com "+"
+str1 = 'Olá, '
+str2 = 'mundo!'
 mensagem = str1 + str2
-print(mensagem)  # Saída: Olá, mundo!
-nome = "Ana"
-saudacao = "Bem-vinda, " + nome + "!"
-print(saudacao)  # Saída: Bem-vinda, Ana!
+print(mensagem)
+
+nome = 'Ana'
+saudacao = 'Bem-vinda, ' + nome + '!'
+print(saudacao)
+
 idade = 25
-info = "Idade: " + str(idade) + " anos"
-print(info)  # Saída: Idade: 25 anos
+info = 'Idade: ' + str(idade) + ' anos'
+print(info)
 
-É possível também usar o operador de multiplicação "*" com strings para repetir uma string um determinado número de vezes.
+# --------------------------------------------
+# REPETIÇÃO DE STRINGS COM "*"
+# --------------------------------------------
 
-Exemplos de repetição de strings:
-repeticao = "Python! " * 3
-print(repeticao)  # Saída: Python! Python! Python!
-linha = "-" * 10
-print(linha)  # Saída: ----------
-titulo = "Capítulo 1\n" * 5
-print(titulo)  # Saída: Capítulo 1 (repetido 5 vezes, cada um em nova linha)
+repeticao = 'Python! ' * 3
+print(repeticao)
 
-Há outra forma de replicar informações em Python:
+linha = '-' * 20
+print(linha)
 
-Exemplo:
+titulo = 'Capítulo 1\n' * 3
+print(titulo)
+
+# --------------------------------------------
+# FORMATAÇÃO E ALINHAMENTO DE STRINGS
+# --------------------------------------------
+
 nome = input('Qual é o seu nome? ')
-print(('Prazer em te conhecer, {:<20}!' .format(nome)))
-# O código acima alinha o nome à esquerda em um campo de 20 caracteres.
-print(('Prazer em te conhecer, {:^20}!' .format(nome)))
-# O código acima centraliza o nome em um campo de 20 caracteres.
-print(('Prazer em te conhecer, {:>20}!' .format(nome)))
-# O código acima alinha o nome à direita em um campo de 20 caracteres.
-print(('Prazer em te conhecer, {:*^20}!' .format(nome)))
-# O código acima centraliza o nome em um campo de 20 caracteres, preenchendo os espaços vazios com asteriscos (*).
+
+print('Prazer em te conhecer, {:<20}!'.format(nome))  # Alinhado à esquerda
+print('Prazer em te conhecer, {:^20}!'.format(nome))  # Centralizado
+print('Prazer em te conhecer, {:>20}!'.format(nome))  # Alinhado à direita
+print('Prazer em te conhecer, {:*^20}!'.format(nome)) # Centralizado com preenchimento
+
+# ============================================
+# FIM DA AULA
+# ============================================
