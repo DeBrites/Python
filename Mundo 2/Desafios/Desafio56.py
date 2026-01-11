@@ -2,19 +2,20 @@
 idadevelho = 0
 qtdnova = 0
 idadetotal = 0
-for c in range(1,5):
-	nome = input(f'Qual é o nome da {c}º pessoa? ')
-	idade = int(input('Qual é a idade dessa pessoa? '))
-	print('''E qual é o sexo dela?
-		1 - Homem
-		2 - Mulher''')
-	sex = int(input('Escolha uma das opções acima: '))
-	if sex == 1:
-		if idadevelho < idade:
+for c in range(1, 5):
+	print('----- {}ª PESSOA -----'.format(c))
+	nome = str(input('Nome: ')).strip()
+	idade = int(input('Idade: '))
+	sexo = str(input('Sexo [M/F]: ')).strip().upper()
+	idadetotal += idade
+	if sexo == 'M':
+		if idade > idadevelho:
+			idadevelho = idade
 			nomevelho = nome
-	elif sex == 2:
+	elif sexo == 'F':
 		if idade < 20:
 			qtdnova += 1
-	idadetotal += idade
-	media = idadetotal/4
-print(f'A média de idade do grupo é de {media}, o nome do homem mais velho é {nomevelho}, e existem {qtdnova} mulheres com menos de 20 anos.')
+media = idadetotal / 4
+print('A média de idade do grupo é de {} anos.'.format(media))
+print('O homem mais velho se chama {} e tem {} anos.'.format(nomevelho, idadevelho))
+print('Ao todo são {} mulheres com menos de 20 anos.'.format(qtdnova))
